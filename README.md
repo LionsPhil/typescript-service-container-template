@@ -39,6 +39,8 @@ While you can build and run with nothing but Docker, you'll want to [install Nod
 # License and errata
 This stuff is public domain. Go nuts, build whatever. It's mostly cribbed together bits of examples and documentation from the wider web anyway.
 
+**You probably want to replace `LICENSE`,** unless you plan to also public domain whatever you're building.
+
 If you think the template could set better precendents, the most convincing argument is a pull request with a good commit message.
 A few starters:
 
