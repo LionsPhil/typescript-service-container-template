@@ -7,7 +7,7 @@ Tries to do everything neat and proper, as per the state of the art circa May 20
 You can take this repository, put it on a machine [with Docker installed](https://docs.docker.com/linux/step_one/), and run:
 
 ```sh
-docker build -t foo . && docker run -it -p 8080:8080 foo
+docker build -t foo . && docker run -it -p 8080:8080 --rm foo
 ```
 
 The service will build, lint, unit test, and run (in the foreground\*) without the need for any Node tools on your workstation itself.
