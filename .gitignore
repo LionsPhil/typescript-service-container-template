@@ -1,0 +1,9 @@
+# Don't track node modules or type annotations
+node_modules
+typings
+
+# Compiler output from local, non-Docker builds
+*.js
+
+# Except for the test specifications, which are currently plain JS
+!spec/*.js
