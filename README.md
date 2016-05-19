@@ -12,7 +12,7 @@ docker build -t foo . && docker run -it -p 8080:8080 foo
 
 The service will build, lint, unit test, and run (in the foreground\*) without the need for any Node tools on your workstation itself.
 
-\* Use `docker run` flags as appropriate, although the expected use is build an image with a more sensible tag and push it off to be run under some container orchestration system, like Kubernetes.
+\* Use `docker run` flags as appropriate, although the expected use is build an image with a more sensible tag and push it off to be run under some container orchestration system, like [Kubernetes](http://kubernetes.io/).
 
 ## Bonus features
 The default code does a few sorta-opinionated things you might want to keep:
