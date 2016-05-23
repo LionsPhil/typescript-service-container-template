@@ -21,7 +21,7 @@ RUN node_modules/.bin/tsc
 
 # Lint
 COPY tslint.json /usr/src/app/
-RUN node_modules/.bin/tslint *.ts
+RUN node_modules/.bin/tslint *.ts spec/*.ts
 
 # Unit test
 COPY spec /usr/src/app/spec

@@ -4,6 +4,3 @@ typings
 
 # Compiler output from local, non-Docker builds
 *.js
-
-# Except for the test specifications, which are currently plain JS
-!spec/*.js

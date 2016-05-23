@@ -44,7 +44,7 @@ This stuff is public domain. Go nuts, build whatever. It's mostly cribbed togeth
 If you think the template could set better precendents, the most convincing argument is a pull request with a good commit message.
 A few starters:
 
- - Jasmine specifications are currently plain-JavaScript, rather than being run through the TypeScript compiler.
- - It doesn't do anything with Grunt or Gulp, and maybe should. The build rules are straight in the Dockerfile.
  - TypeDoc is in the `dev-dependencies`, but isn't currently being used because 1) building docs inside the container isn't very useful 2) it was being obstinate.
+ - No coverage for the unit tests yet. Perhaps hook up Istanbul, but like the docs wants to put output outside the container.
+ - It doesn't do anything with Grunt or Gulp, and maybe should. The build rules are straight in the Dockerfile.
  - Get the modularized source code under a library subdirectory, rather than flopping around in the root directory. TypeScript's new module resolution logic does not make this as simple as `./lib/hello`.

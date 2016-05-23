@@ -6,7 +6,6 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.13.4",
-    "typings": "^1.0.4",
     "winston": "^2.2.0"
   },
   "devDependencies": {
@@ -14,6 +13,6 @@
     "tslint": "^3.10.2",
     "typedoc": "^0.3.12",
     "typescript": "^1.8.10",
-    "typings": "^1.0.3"
+    "typings": "^1.0.4"
   }
 }
