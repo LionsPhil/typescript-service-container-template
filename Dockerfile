@@ -13,8 +13,9 @@ RUN npm install
 COPY typings.json /usr/src/app/
 RUN node_modules/.bin/typings install
 
-# Put the TypeScript source in place
+# Put the TypeScript source and specs in place
 COPY *.ts tsconfig.json /usr/src/app/
+COPY spec /usr/src/app/spec
 
 # Compile
 RUN node_modules/.bin/tsc
@@ -24,7 +25,6 @@ COPY tslint.json /usr/src/app/
 RUN node_modules/.bin/tslint *.ts spec/*.ts
 
 # Unit test
-COPY spec /usr/src/app/spec
 RUN node_modules/.bin/jasmine
 
 # Port it listens on
