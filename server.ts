@@ -12,7 +12,7 @@ import * as hello from './hello';
 let logger = new (winston.Logger)({
 	transports: [
 		new (winston.transports.Console)({
-			timestamp: function() {
+			timestamp: () => {
 				return (new Date).toISOString();
 			},
 			handleExceptions: true
@@ -26,7 +26,7 @@ logger.info('Hello starting');
 
 let app = express();
 
-app.get("/", function(request, response) {
+app.get("/", (request, response) => {
 	response.send(hello.greeting());
 });
 
@@ -34,7 +34,7 @@ let server = app.listen(8080);
 
 /* Set up exit handler *******************************************************/
 
-process.on('exit', function() {
+process.on('exit', () => {
 	logger.info('Hello stopping');
 
 	if(server !== undefined) {
@@ -42,8 +42,8 @@ process.on('exit', function() {
 	}
 });
 
-process.on('SIGINT',  function() { process.exit(0); });
-process.on('SIGTERM', function() { process.exit(0); });
+process.on('SIGINT',  () => { process.exit(0); });
+process.on('SIGTERM', () => { process.exit(0); });
 
 /* Done, process held open by I/O ********************************************/
 
