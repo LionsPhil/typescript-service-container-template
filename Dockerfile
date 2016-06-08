@@ -1,8 +1,7 @@
 # Start with the LTS release of Node
 FROM node:argon
 
-# Create app directory
-RUN mkdir -p /usr/src/app
+# Create and use app directory
 WORKDIR /usr/src/app
 
 # Install app dependencies
